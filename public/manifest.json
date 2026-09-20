@@ -7,10 +7,26 @@
     "storage",
     "sidePanel"
   ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
   "action": {
-    "default_title": "Open Chess Human"
+    "default_title": "Chess Human"
   },
   "side_panel": {
     "default_path": "index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.chess.com/*",
+        "https://lichess.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
 }
