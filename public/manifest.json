@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Chess Human Extension",
+  "version": "0.1.0",
+  "description": "Local chess analysis and training extension.",
+  "permissions": [
+    "storage",
+    "sidePanel"
+  ],
+  "action": {
+    "default_title": "Open Chess Human"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  }
+}
